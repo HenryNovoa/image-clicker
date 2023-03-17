@@ -1,0 +1,33 @@
+.itemDetails {
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+  
+  .itemDetails img {
+    max-width: 100%;
+    cursor: pointer;
+    display: block;
+    margin: 16px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+  
+  .itemDetails h2 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .itemDetails p {
+    margin-top: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+  }
