@@ -3,12 +3,10 @@ import styles from './PokemonItem.module.css';
 
 const PokemonItem = ({ item, handleItemClick }) => {
   return (
-          <li className={styles.item} key={item.id}>
-            <button onClick={() => handleItemClick(item.id)}>
+          <div className={styles.item} key={item.id} onClick={() => handleItemClick(item.id)}>
+              <h2>{item.name}</h2>
               <img src={item.imageUrl} alt={item.name} />
-              <span>{item.name}</span>
-            </button>
-          </li>
+          </div>
   );
 };
 
