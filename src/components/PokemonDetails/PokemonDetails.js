@@ -2,7 +2,7 @@ import React from 'react';
 import { usePokemonContext } from '../../context/PokemonContextProvider';
 import styles from './PokemonDetails.module.css';
 
-function ItemDetails() {
+const ItemDetails = () => {
   const { selectedItem , incrementClicks } = usePokemonContext();
   if(!selectedItem) {
     return null;
