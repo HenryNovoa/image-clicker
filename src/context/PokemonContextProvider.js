@@ -1,8 +1,7 @@
 import React, { useState, useEffect, createContext, useContext } from 'react';
-import { getPokemons, getPokemonDetails } from '../services/pokemonApi';
+import { getPokemons, getPokemonDetails, getPokemonImageUrl } from '../services/pokemonApi';
 
 const PokemonContext = createContext();
-const IMAGE_URL = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'
 
 export const usePokemonContext = () => {
   return useContext(PokemonContext);
@@ -11,7 +10,7 @@ export const usePokemonContext = () => {
 const PokemonContextProvider = ({ children }) => {
   const [items, setItems] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null);
-
+  console.log(items)
   useEffect(() => {
     fetchItems();
   }, []);
@@ -21,9 +20,7 @@ const PokemonContextProvider = ({ children }) => {
     const items = itemsData.map((itemData) => ({
       id: itemData.name,
       name: itemData.name.toUpperCase(),
-      imageUrl: `${IMAGE_URL}${
-        itemData.url.split('/')[6]
-      }.png`,
+      imageUrl: getPokemonImageUrl(itemData.url),
       clicks: 0,
     }));
     setItems(items);

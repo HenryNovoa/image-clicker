@@ -1,9 +1,11 @@
 .Home {
+  display: flex;
+  flex-direction: column;
+  margin: 0 35px;
 }
 
-@media screen and (max-width: 768px) {
-  .Home {
-    flex-direction: column;
-    gap: 16px;
-  }
+.Content {
+  display: flex;
+  gap: 16px;
 }
+

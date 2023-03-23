@@ -1,11 +1,12 @@
 import { React } from 'react'
+import styles from './PokemonHeader.module.css'
 
 const PokemonHeader = () => {
 
     return (
-        <head>
-            <h1>Pokemon Image Clicker</h1>
-        </head>
+        <header className={styles.pokemonHeader}>
+            <h1>Pokémon Image Clicker</h1>
+        </header>
     );
 };
 
